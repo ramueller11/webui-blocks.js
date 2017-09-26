@@ -1,0 +1,113 @@
+body{
+	    font-family: 'Roboto', Arial, sans-serif;
+		font-size: 14pt;
+		background: navy;
+}
+
+.form-body{
+	background-color: white;
+	min-width: 500px;
+	max-width: 800px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:10%;
+	padding-right:20%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	box-shadow: 0px 0px 20px #000;
+}
+
+.form-label{
+	background-color: transparent;
+	font-weight:bold;
+	text-align: right;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 14pt;
+	vertical-align: middle;
+	display:inline-block;
+}
+
+.form-textbox {
+	padding: 0;
+	height: 20pt;
+	outline: none;
+	border: none;
+	border-color: gray;
+	background-color: transparent;
+	font-family: 'Roboto', Arial, sans-serif;
+	min-width:75%;
+	max-width:320px;
+	width: 88%;
+	font-size: 14pt;
+	float: left;
+}
+
+.form-combobox {
+	width: 100%;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	border-color: gray;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 14pt;
+}
+
+.form-combobox:focus{
+	border: none;
+	box-shadow: inset 2px 2px 3px #CCC;
+}
+
+.form-checkbox{
+	outline: none;
+	border: none;
+	background-color: red;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 20pt;
+	display:inline-block;
+}
+
+.form-radio{
+	outline: none;
+	border: none;
+	background-color: red;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 20pt;
+	display:inline-block;
+}
+
+.controlframe-active {
+	box-shadow: inset 2px 2px 3px #CCC;
+}
+
+.controlframe{
+	border: 1px solid #cdcdcd;
+	border-color: rgba(0,0,0,.15);
+	background-color: transparent;
+	border-radius: 3px;
+	padding-left: 2px;
+	width: 250px;
+	display:inline-block;
+	vertical-align: middle;
+	margin: 2px 4px 2px 4px;
+}
+
+.form-validind{
+	background-color: transparent;
+	padding: 0px; 
+	margin: 0px;
+	margin-right: 2px;
+	font-size: 14pt;
+	text-align:right;
+	max-width: 20pt;
+	width: 20pt;
+	float: right;
+}

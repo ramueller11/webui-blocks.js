@@ -1,0 +1,80 @@
+<html>
+<meta name="googlebot" content="noindex, noarchive, nofollow, nosnippet">
+<meta name="robots" content="noindex, noarchive, nofollow">
+<meta name="slurp" content="noindex, noarchive, nofollow, noodp, noydir">
+<meta name="msnbot" content="noindex, noarchive, nofollow, noodp">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- TODO: Change the title -->
+<title>This is this the title</title>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="inputstyle.css">
+	<script src="pickaday.js"></script>
+	<script src="inputui.js"></script>
+</head>
+
+<body onload='startup()'>
+
+
+	<div class='form-body'>
+			<div style='width:500px; text-align:right;'>
+			<span class='form-label'>First Name:</span>
+			<span class='controlframe'>
+				<input name='firstname' type='text' class='form-textbox'
+						placeholder="First Name">
+				<span id='validind_firstname' class='form-validind'></span>
+			</span>
+			
+			<br>
+			<span class='form-label'>Last Name:</span>
+			<span class='controlframe'>
+				<input name='lastname' type='text' class='form-textbox'
+					placeholder="Lastname">
+				<span id='validind_lastname' class='form-validind'></span>
+			</span>
+			<br>
+			<span class='form-label'>Email Address:</span>
+			<span class='controlframe'>
+				<input name='email' type='text' class='form-textbox'
+					placeholder="user@domain.com">
+				<span id='validind_email' class='form-validind'>&nbsp;</span>
+			</span>
+			<br>
+			<div>
+				<input id='chkA' type='checkbox' class='form-checkbox'><label class='form-label' for='chkA'>A</label>
+				<input id='chkB' type='checkbox' class='form-checkbox'><label class='form-label' for='chkA'>B</label>
+			</div>
+			<br>
+
+				<input name='radioex' id='radA' type='radio' class='form-radio' value='a'>A</input>
+				<input name='radioex' id='radB' type='radio' class='form-radio' value='b'>B</input>
+
+			<br>
+			<span class='form-label'>This is a combobox:</span>
+			
+			<span class='controlframe'>
+				<select class='form-combobox'>
+						<option>a</option>
+						<option>b</option>
+						<option>c</option>
+				</select>
+			</span>
+			<br>
+			<span class='controlframe'>
+				<input type="button" id="datepicker">
+			</span>
+			
+			</div>
+	</div>
+
+</body>
+
+</html>
