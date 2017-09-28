@@ -19,35 +19,19 @@ function startup(){
 			}
 		}
 	}
-	
-	var picker = new Pikaday({ field: document.getElementById('datepicker') });
-	
+		
 	return;
 }
 
+/* input focus and blur events */
 function blurhandler(){
-	console.log('blur: ' + this.name );
-	validatehandler()
-	
 	this.parentNode.className = this.parentNode.className.replace(/ controlframe-active/,'')
-	
-	/*
-	instance.parentNode.style.background-color = 'white';
-	instance.parentNode.parentNode.style.background-color = 'white';
-	*/
+	validatehandler.call(this)
 }
 
 function focushandler(){
-	console.log('focus: ' + this.name );
 	this.parentNode.className+=' controlframe-active'
 	validatehandler.call(this)
-	
-	/*
-	instance.style.background-color = 'yellow';
-	instance.parentNode.style.background-color = 'yellow';
-	instance.parentNode.parentNode.style.background-color = 'yellow';
-	*/
-	return;
 }
 
 function validatehandler(){
@@ -97,10 +81,13 @@ function validatehandler(){
 		return;
 	
 	if ( this.value.length >= minlength &&
-		 cur_regex.test(this.value) == true )
+		 cur_regex.test(this.value) == true ){
 		indicator.innerHTML = validindication;
-	else
+		validstates[this.name] = true;
+	}
+	else{
 		indicator.innerHTML = invalidindication;
-	
+		validstate[this.name] = false
+	}
 	return;
 }

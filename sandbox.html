@@ -1,0 +1,37 @@
+<html>
+<script>
+	var globalvars = new Object()
+	
+	function validateprotocol(){
+		var memo = globalvars.validateprotocol;
+		
+		if ( memo == undefined )
+			memo = { isbusy:0, valid: 0, response: undefined }
+		
+		if ( memo.isbusy )
+			return;
+			
+		memo.busy = 1;
+		req = new XMLHTTPRequest()
+		
+		req.onreadystatechange = function(){
+			if ( this.readyState == 4 ){
+				globalvars.validateprotocol.isbusy = 0;
+				globalvars.validateprotocol.response = this;
+			}
+			else{
+				globalvars.validateprotocol.isbusy = 1;
+				globalvars.validateprotocol.response = undefined;
+			}
+		}
+			
+		req.open("GET", "do.php?q=" +  );
+		req.send();
+		
+	}
+</script>
+
+<p id='test'></p>
+
+<input type='button' onclick='validateprotocol(); document.getElementById("test").innerHTML = globalvars.validateprotocol.response.responseText;'>
+</html>
